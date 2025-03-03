@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="register.css">
+        <title>handphonestore/register</title>   
+    </head>
+        <element id="R">
+            <a>Handphone Store </a>
+        </element> 
+        <element id="A">
+            <a href="home.html">Home</a>
+            <a href="allmobiles.html">All Mobiles</a>
+            <a href="login.html">Login</a>
+        </element>
+            <hr>
+                <div id="register">
+                    <form name="registerfrm">
+                        <h3>
+                        Register
+                        </h3> 
+                            <p>
+                                <input type="name"name = "name" placeholder="Type your name here"/>
+                            </p>   
+                                <p>
+                                    <input type="email"name = "email" placeholder="Type your email here"/>
+                                </p>
+                                    <p>
+                                        <input type="password" name = "password" placeholder="Type your password here"/>
+                                    </p>
+                    
+                        <p>
+                            <a href="login.html">Already have an account? Login</a>
+                        </p>
+                            <p>
+                                <input type="submit"name="submitbtn"value = "Register">
+                            </p>
+                    </form>
+                </div>
+</html>
