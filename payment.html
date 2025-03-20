@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" 
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <style>
+        .payment {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f5f5f5;
+        }
+        .payment__container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .payment__container h2 {
+            margin-bottom: 20px;
+        }
+        .payment__summary {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        .payment__summary span {
+            font-weight: bold;
+        }
+        .payment__form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .payment__form button {
+            width: 100%;
+            padding: 10px;
+            background: #fbca1f;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .payment__form button:hover {
+            background: #ffb319;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar Section-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo"> <i class="fas fa-gem"></i> Rolphite Phones</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="/handphonestore/index.html" class="navbar__links">Home</a></li>
+                <li class="navbar__item"><a href="/handphonestore/products.html" class="navbar__links">Products</a></li>
+                <li class="navbar__item"><a href="/handphonestore/cart.html" class="navbar__links">Cart</a></li>
+                <li class="navbar__btn"><a href="/handphonestore/LogIn.html" class="button">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Payment Section -->
+    <div class="payment">
+        <h1>Payment Details</h1>
+        <div class="payment__container">
+            <h2>Order Summary</h2>
+            <div class="payment__summary">
+                <p>Subtotal: RM <span id="subtotal">0.00</span></p>
+                <p>Tax (10%): RM <span id="tax">0.00</span></p>
+                <p>Total: RM <span id="total">0.00</span></p>
+            </div>
+            <h2>Enter Your Payment Information</h2>
+            <form class="payment__form" id="payment-form">
+                <input type="text" id="card-name" placeholder="Cardholder Name" required>
+                <span class="error-message" id="name-error">Please enter a valid name.</span>
+
+                <input type="text" id="card-number" placeholder="Card Number" required>
+                <span class="error-message" id="card-error">Please enter a valid 16-digit card number.</span>
+
+                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                <span class="error-message" id="expiry-error">Please enter a valid expiry date (MM/YY).</span>
+
+                <input type="text" id="cvv" placeholder="CVV" required>
+                <span class="error-message" id="cvv-error">Please enter a valid 3-digit CVV.</span>
+
+                <button type="submit">Confirm Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Footer Section-->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Testimonials</a>
+                    <a href="/">Careers</a>
+                    <a href="/">Investments</a>
+                    <a href="/">Terms Of Service</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Contact Us</h2>
+                    <a href="/">Contact</a>
+                    <a href="/">Support</a>
+                    <a href="/">Destinations</a>
+                    <a href="/">Sponsorships</a>
+                </div>
+            </div>
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Videos</h2>
+                    <a href="/">Submit Video</a>
+                    <a href="/">Ambassadors</a>
+                    <a href="/">Agency</a>
+                    <a href="/">Influencer</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="/">Instagram</a>
+                    <a href="/">Facebook</a>
+                    <a href="/">Youtube</a>
+                    <a href="/">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="footer__logo"><i class="fas fa-gem"></i>Rolphite Phones</a>
+                </div>
+                <p class="website__rights">© Rolphite Phones 2024. All rights reserved</p>
+                <div class="social__icons">
+                    <a href="/" class="social__icons--link" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="/" class="social__icons--link" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="/" class="social__icons--link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="/" class="social__icons--link" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="/" class="social__icons--link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

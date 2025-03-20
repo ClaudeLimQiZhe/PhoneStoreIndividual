@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" 
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <style>
+        .products {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f5f5f5;
+        }
+        .products__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product__card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product__card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            filter: brightness(90%);
+        }
+        .product__card h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        .product__card p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .product__card .button {
+            margin-top: 10px;
+        }
+        @media screen and (max-width: 768px) {
+            .products__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .products__container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo"><i class="fas fa-gem"></i> Rolphite Phones</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="/handphonestore/index.html" class="navbar__links">Home</a></li>
+                <li class="navbar__item"><a href="/handphonestore/products.html" class="navbar__links">Products</a></li>
+                <li class="navbar__item"><a href="/handphonestore/cart.html" class="navbar__links">Cart</a></li>
+                <li class="navbar__btn"><a href="/handphonestore/LogIn.html" class="button">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Listing Section -->
+    <div class="products">
+        <h1>Explore Our Phones</h1>
+        <div class="products__container">
+            <div class="product__card">
+                <img src="images/S25.jpg" alt="Samsung Galaxy S25 Ultra">
+                <h2>Samsung Galaxy S25 Ultra</h2>
+                <p>RM 7199</p>
+                <button class="button add-to-cart" data-name="Samsung Galaxy S25 Ultra" data-price="7199" data-image="images/S25.jpg">Add to Cart</button>
+            </div>
+            <div class="product__card">
+                <img src="images/Reno13.png" alt="Phone 2">
+                <h2>Oppo Reno 13</h2>
+                <p>RM 2399</p>
+                <button class="button add-to-cart" data-name="Oppo Reno 13" data-price="2399" data-image="images/Reno13.png">Add to Cart</button>
+            </div>
+            <div class="product__card">
+                <img src="images/S24.webp" alt="Phone 3">
+                <h2>Samsung Galaxy S24 Ultra</h2>
+                <p>RM 4999</p>
+                <button class="button add-to-cart" data-name="Samsung Galaxy S24 Ultra" data-price="4999" data-image="images/S24.webp">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer Section-->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="/">How it works</a>
+                    <a href="/">Testimonials</a>
+                    <a href="/">Careers</a>
+                    <a href="/">Investments</a>
+                    <a href="/">Terms Of Service</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Contact Us</h2>
+                    <a href="/">Contact</a>
+                    <a href="/">Support</a>
+                    <a href="/">Destinations</a>
+                    <a href="/">Sponsorships</a>
+                </div>
+            </div>
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Videos</h2>
+                    <a href="/">Submit Video</a>
+                    <a href="/">Ambassadors</a>
+                    <a href="/">Agency</a>
+                    <a href="/">Influencer</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="/">Instagram</a>
+                    <a href="/">Facebook</a>
+                    <a href="/">Youtube</a>
+                    <a href="/">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="footer__logo"><i class="fas fa-gem"></i>Rolphite Phones</a>
+                </div>
+                <p class="website__rights">© Rolphite Phones 2024. All rights reserved</p>
+                <div class="social__icons">
+                    <a href="/" class="social__icons--link" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="/" class="social__icons--link" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="/" class="social__icons--link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="/" class="social__icons--link" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="/" class="social__icons--link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+h3
+{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-left: 550px;
+    margin-right: 550px;
+    padding-top: 20px;;
+    padding-bottom: 20px;
+    border-radius: 9px;
+    background-color: blueviolet;
+}
+
+p
+{
+    margin-left: 620px;
+    font-weight: bold;
+    height: 50px;
+}
+
+.profile
+{
+    display:flex;
+    justify-content: space-between;
+    max-width: 670px;
+    margin: 0 auto;
+    padding-top: 10px;
+    font-weight: bold;
+    margin-left: 650px;
+}
+
+.profile input[type=text]
+{
+    width: 240px;
+    height:30px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+#profile_1 p
+{
+    
+    font-weight: bold;
+    margin-left: 650px;
+    padding-top: 10px;
+}
+
+#profile_1 input[type=tel]
+{
+    width: 577px;
+    height:30px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.profile2
+{
+    margin-left: 650px;
+    font-weight: bold;
+    max-width: 600px;
+}
+
+.profile2 textarea
+{
+    width: 550px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.profile3
+{
+    display:flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 10px;
+    font-weight: bold;
+    margin-left: 650px;
+}
+
+.profile3 input[type=text]
+{
+    width: 140px;
+    height:30px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.profile4
+{
+    display:flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    font-weight: bold;
+    margin-left: 650px;
+}
+
+.profile4 input[type=text]
+{
+    width: 100px;
+    height:30px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+#profile_2 p
+{
+    font-weight: bold;
+    margin-left: 650px;
+    padding-top: 10px;
+}
+
+#profile_2 input[type=radio]
+{
+    margin-right: 10px;
+
+}
+
+#profile_2 input[type=submit]
+{
+    width:100px;
+    height:40px;
+    border:1px;
+    border-radius: 8px;
+    margin-left: 240px;
+}
+
+#profile_2 input[type=submit]:hover
+{
+    background-color: rgba(128, 128, 128, 0.545);
+}
+
