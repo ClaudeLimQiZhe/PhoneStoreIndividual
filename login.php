@@ -1,63 +1,42 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-header("Content-Type: application/json");
+    $page_title = "Login";
+    include_once 'header.php';
+?>
 
-// Database connection
-$servername = "localhost"; 
-$username = "root"; 
-$password = ""; // Default XAMPP password is empty
-$database = "handphonestore"; 
+<div class="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+        <input type="text" id="login_input" name="login_input" placeholder="Username or Email" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="/SignUp.php">Sign Up</a></p>
+</div>
 
-$conn = new mysqli($servername, $username, $password, $database);
+<script>
+document.getElementById("login-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    let loginInput = document.getElementById("login_input").value;
+    let password = document.getElementById("password").value;
 
-if ($conn->connect_error) {
-    die(json_encode(["success" => false, "message" => "Database connection failed: " . $conn->connect_error]));
-}
+    fetch("login_process.php", {  // Now calling the correct file
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ login_input: loginInput, password: password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = data.redirect;
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+});
+</script>
 
-// Check if request is POST
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    echo json_encode(["success" => false, "message" => "Invalid request method"]);
-    exit();
-}
-
-// Read raw JSON input
-$inputJSON = file_get_contents("php://input");
-error_log("Raw Input JSON: " . $inputJSON); // Log raw input
-
-$input = json_decode($inputJSON, true);
-error_log("Decoded JSON: " . print_r($input, true)); // Log decoded JSON
-
-// Validate input
-if (!$input || !isset($input['login_input']) || !isset($input['password'])) {
-    echo json_encode(["success" => false, "message" => "Missing input fields"]);
-    exit();
-}
-
-$login_input = $input['login_input'];
-$password = $input['password'];
-
-// Query the database
-$stmt = $conn->prepare("SELECT * FROM users WHERE email = ? OR username = ?");
-$stmt->bind_param("ss", $login_input, $login_input);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) { 
-    $user = $result->fetch_assoc();
-    error_log("User found: " . print_r($user, true));
-
-    if ($password === $user['password']) { // Plain text comparison
-        session_start();
-        $_SESSION['user_id'] = $user['id']; 
-        echo json_encode(["success" => true, "redirect" => "edit.php?id=" . $user['id']]);
-    } else {
-        echo json_encode(["success" => false, "message" => "Invalid password"]);
-    }
-} else { 
-    echo json_encode(["success" => false, "message" => "User not found"]);
-}
-
-$stmt->close();
-$conn->close();
+<?php
+    include_once 'footer.php';
 ?>

@@ -1,46 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Menu</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" 
-    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation Bar Section-->
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="/" id="navbar__logo"> <i class="fas fa-gem"></i> Rolphite Phones</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item"><a href="/handphonestore/index.html" class="navbar__links">Home</a></li>
-                <li class="navbar__item"><a href="/handphonestore/products.html" class="navbar__links">Products</a></li>
-                <li class="navbar__item"><a href="/handphonestore/cart.html" class="navbar__links">Cart</a></li>
-                <li class="navbar__btn"><a href="/handphonestore/LogIn.html" class="button">Login</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!--Login Section-->
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="login-form">
-            <input type="text" id="login_input" name="login_input" placeholder="Username or Email" required>
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="/signup.html">Sign Up</a></p>
-    </div>
-    
     <!--Footer Section-->
     <div class="footer__container">
         <div class="footer__links">
@@ -94,7 +51,6 @@
             </div>
         </div>
     </div>
-     
 
     <script src="app.js"></script>
 </body>

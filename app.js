@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log("Cart total stored:", { subtotal, tax, total });
 
-            window.location.href = "/handphonestore/payment.html";
+            window.location.href = "/handphonestore/payment.php";
         });
     }
 
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (data.success) {
                     alert("Payment successful!");
                     localStorage.clear();
-                    window.location.href = "/handphonestore/index.html";
+                    window.location.href = "/handphonestore/index.php";
                 } else {
                     alert("Payment failed: " + data.message);
                 }
