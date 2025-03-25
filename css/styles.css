@@ -747,17 +747,15 @@ h2 {
 .signup-button {
     width: 100%;
     padding: 10px;
-    background-color: #ff3366;
-    color: white;
+    background: #fbca1f;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .signup-button:hover {
-    background-color: #ff0044;
+    background: #ffb319;
 }
 
 .login-link {
