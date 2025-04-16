@@ -13,14 +13,12 @@ $data = json_decode(file_get_contents("php://input"), true);
 $card_number = $conn->real_escape_string($data["card_number"]);
 $cardholder_name = $conn->real_escape_string($data["cardholder_name"]);
 $expiry_date = $conn->real_escape_string($data["expiry_date"]);
-$cvv = $conn->real_escape_string($data["cvv"]);
 $total_amount = floatval($data["total_amount"]);
 
 // Verify card exists
 $sql = "SELECT * FROM payment_cards WHERE card_number = '$card_number' 
         AND cardholder_name = '$cardholder_name' 
-        AND expiry_date = '$expiry_date' 
-        AND cvv = '$cvv'";
+        AND expiry_date = '$expiry_date'";
 
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {

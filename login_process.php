@@ -8,7 +8,7 @@ header("Content-Type: application/json");
 $servername = "localhost"; 
 $username = "root"; 
 $password = ""; 
-$database = "handphonestore"; 
+$database = "phone_shop"; 
 
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = $input['password'];
 
     // Query the database
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ? OR username = ?");
+    $stmt = $conn->prepare("SELECT * FROM register WHERE Regis_Email = ? OR Regis_Username = ?");
     $stmt->bind_param("ss", $login_input, $login_input);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -45,9 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         error_log("User found: " . print_r($user, true));
 
         // Plaintext password check
-        if ($password === $user['password']) { 
-            $_SESSION['user_id'] = $user['id']; 
-            echo json_encode(["success" => true, "redirect" => "index.php?id=" . $user['id']]);
+        if ($password === $user['Regis_Password']) { 
+            $_SESSION['user_id'] = $user['Regis_ID']; 
+            echo json_encode(["success" => true, "redirect" => "index.php?id=" . $user['Regis_ID']]);
         } else {
             echo json_encode(["success" => false, "message" => "Invalid password"]);
         }

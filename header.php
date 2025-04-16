@@ -32,11 +32,11 @@
                 <li class="navbar__item"><a href="/handphonestore/cart.php" class="navbar__links">Cart</a></li>
                 <?php
                     if (isset($_SESSION["user_id"])) {
-                        echo "<li class='navbar__item'><a href='/handphonestore/edit.php' class='navbar__links'>Profile</a></li>";
+                        echo "<li class='navbar__item'><a href='/handphonestore/EditProfile.php' class='navbar__links'>Profile</a></li>";
                         echo "<li class='navbar__btn'><a href='/handphonestore/Logout.php' class='button'>Logout</a></li>";
                     }
                     else {
-                        echo "<li class='navbar__item'><a href='/handphonestore/SignUp.php' class='navbar__links'>Sign Up</a></li>";
+                        echo "<li class='navbar__item'><a href='/handphonestore/Register.php' class='navbar__links'>Sign Up</a></li>";
                         echo "<li class='navbar__btn'><a href='/handphonestore/Login.php' class='button'>Login</a></li>";
                     }
                 ?>

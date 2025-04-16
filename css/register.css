@@ -1,0 +1,485 @@
+.sidebar 
+{
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    color: white;
+    transition: background-color 0.5s ease-in-out;
+    padding: 20px 0;
+}
+
+.tab 
+{
+    padding: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+}
+
+.menu-icon 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-icon img 
+{
+    width: 50px;
+    height: 50px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.default-icon 
+{
+    display: block;
+    margin-top: -35px;
+    margin-left: -15px;
+}
+
+.hover-icon 
+{
+    display: none;
+}
+
+#menu-toggle 
+{
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon .default-icon 
+{
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon .hover-icon 
+{
+    display: none;
+}
+
+#menu-toggle:checked ~ .submenu,
+#menu-toggle:checked ~ .user-info,
+#menu-toggle:checked ~ .quick-actions,
+#menu-toggle:checked ~ .contact 
+{
+    display: none;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.submenu,
+.user-info,
+.quick-actions,
+.contact 
+{
+    display: flex;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.submenu a,
+.quick-actions a,
+.contact a 
+{
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    margin: 8px 20px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.submenu a:hover
+{
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: scale(1.1);
+}
+
+.submenu 
+{
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.submenu a 
+{
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border-radius: 8px;
+    margin: 8px 20px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sidebar:hover 
+{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.sidebar:hover .tab 
+{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.sidebar:hover .submenu 
+{
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.user-info 
+{
+    display: none;
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    margin: 10px 20px;
+}
+
+.user-info p 
+{
+    margin: 0;
+    font-size: 14px;
+}
+
+.sidebar:hover .user-info 
+{
+    display: block;
+}
+
+.quick-actions 
+{
+    display:none;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    border-radius: 8px;
+    margin: 5px 20px;
+}
+
+.quick-actions p 
+{
+    margin: 0;
+    font-size: 14px;
+}
+
+.quick-actions ul 
+{
+    list-style: none;
+    padding: 0;
+}
+
+.quick-actions li 
+{
+    margin: 5px 0;
+}
+
+.sidebar:hover .quick-actions 
+{
+    display: block;
+}
+
+.contact 
+{
+    display: none;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px 20px;
+}
+
+.contact p 
+{
+    margin: 0;
+    font-size: 14px;
+}
+
+.contact a 
+{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.sidebar:hover .contact 
+{
+    display: block;
+}
+
+#R a
+{
+    margin: 2px;
+    color: blue;  
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 600px;
+    margin-left: 450px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#A a
+{
+    margin: 50px;
+    font-size: 17px;
+    color:blue;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+
+#A a:hover
+{
+    color:darkblue;
+}
+
+header 
+{
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Basic styling for the body */
+body 
+{
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+
+.register
+{
+    width:350px;
+    height: 370px;
+    background-color:rgb(185, 88, 53);
+    margin: 5cm;
+    color:white;
+    text-align: left, 2cap;
+    border:1px solid black;
+    border-radius: 2cap;
+    padding:10px;
+    text-align: center;
+    margin-left: 780px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn 
+{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.register h3
+{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.6cm; 
+    text-align: center;
+}
+
+.register input[type=text],[type=email],[type=password]
+{
+    width:250px;
+    height:25px;
+    border:1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px 5px 40px;
+    margin-left: 1cap;
+    font-size:15px;
+}
+
+.register input[type=text] 
+{
+    background-image: url(img/person.png);
+    background-repeat: no-repeat;
+    background-position: 0.5cqi;
+}
+
+.register input[type=email]
+{
+    background-image: url(img/email.png);
+    background-repeat:no-repeat;
+    background-position: 0.5cqi;
+}
+
+.register input[type=password]
+{
+    background-image: url('img/key.png');
+    background-repeat: no-repeat;
+    background-position: 0.5cqi;
+}
+
+.register input[type=word] 
+{
+    background-image: url('img/key.png');
+    background-repeat: no-repeat;
+    background-position: 0.5cqi;
+    width:250px;
+    height:25px;
+    border:1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px 5px 40px;
+    margin-left: 1cap;
+    font-size:15px;
+}
+
+.register img
+{
+    margin-top: -30px;
+    margin-left: 295px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.login
+{
+    margin-bottom: 20px;
+    margin-left: 23px;
+    color: black;
+}
+
+.login a
+{
+   font-size: small;
+   text-decoration: none;
+   padding-left: 25px;
+}
+
+#register-buttons input[type=submit]
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 113px;
+}
+
+#register-buttons input[type=submit]:hover
+{
+    color:black;
+    background:lightblue;
+    transform: scale(1);
+}
+
+.back-button
+{
+    margin-top: 10px;
+    display: inline-block;
+    padding: 15px 25px;
+    border: none;
+    background: grey;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.register a 
+{
+    display: inline-block;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.register a:hover
+{
+    color:red;
+}
+
+
+footer 
+{
+    background: #333;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    height: 250px;
+    margin-top: -136px;
+}
+
+.footer-content 
+{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-section 
+{
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.footer-section h3 
+{
+    font-size: 18px;
+    color: #ccc;
+}
+
+.footer-section p, .footer-section ul 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li 
+{
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a 
+{
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover 
+{
+    text-decoration: underline;
+}
+
+.social-links a 
+{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links img 
+{
+    width: 24px;
+    height: 24px;
+    margin: 0 5px; /* Add margin to separate the icons */
+}
+
+.footer-bottom 
+{
+    background: #222;
+    padding: 10px 0;
+    text-align: center;
+    color: #ccc;
+}
+
+
+
+
